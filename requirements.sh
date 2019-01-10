@@ -13,10 +13,8 @@ pm="sudo apt-get install -y"
 #setting dependencies and package manager in relation to the distribution
 if [ "$dist"  == "Arch"  ]; then
     pm="sudo pacman -S"
-elif [ "$dist" ==  "Ubuntu" ] || [ "$dist" == "KDE" ] || [ "$dist" == "Debian" ] || [ "$dist" == "antiX" ]; then
+elif [ "$dist" ==  "Ubuntu" ] || [ "$dist" == "KDE" ] || [ "$dist" == "Debian" ] || [ "$dist" == "antiX" ] || [ "$dist"  == "Raspbian"  ]; then
     pm="sudo apt-get install -y"
-elif [ "$dist"  == "Raspbian"  ]; then
-    pm="pkcon install"
 elif [ "$dist"  == "Fedora" ] || [ "$dist" == "RedHat" ] || [ "$dist" == "CentOS" ]; then
     dependencies=( build-essential cmake libgtk-3-dev libboost-all-dev libfreetype6-dev opencv-python)
     pm="sudo yum -y install"
